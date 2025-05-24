@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Greg Annandale's Photography Portfolio",
   "scripts": {
-    "build:sass": "sass src/scss:_site/css --style compressed",
+    "build:sass": "sass src/scss/main.scss src/css/main.css --style compressed",
+    "watch:sass": "sass --watch src/scss/main.scss:src/css/main.css --no-source-map",
     "build:eleventy": "eleventy",
-    "build": "npm-run-all build:*",
-    "watch:sass": "sass src/scss:_site/css --watch",
+    "build": "npm run build:sass && npm run build:eleventy",
     "watch:eleventy": "eleventy --serve",
-    "start": "npm-run-all build:sass --parallel watch:*"
+    "start": "npm-run-all --parallel watch:sass watch:eleventy"
   },
   "keywords": [],
   "author": "Greg Annandale",
