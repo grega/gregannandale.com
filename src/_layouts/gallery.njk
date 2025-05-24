@@ -28,27 +28,9 @@ layout: base.njk
         {% if galleryPath %}{% set pageUrl = pageUrl + "/" %}{% endif %}
         {% set pageUrl = pageUrl + loop.index0 + "/" %}
         <a href="{{ pageUrl }}" class="thumbnail-wrapper">
-          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" sizes="(min-width: 1200px) 1200px, 100vw" />
+          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" sizes="(min-width: 200px) 400px" />
         </a>
       {% endif %}
     {% endfor %}
   </div>
-
-  {# Navigation - only shown if showNavigation is true #}
-  {% if showNavigation %}
-    {% set paginationData = page | getPaginationData %}
-    {% if paginationData and images %}
-      {% set nav = paginationData | getNavigation(images | length) %}
-      {% if nav.previous or nav.next %}
-      <nav class="pagination">
-        {% if nav.previous %}
-          <a href="{{ nav.previous }}" class="prev">Previous</a>
-        {% endif %}
-        {% if nav.next %}
-          <a href="{{ nav.next }}" class="next">Next</a>
-        {% endif %}
-      </nav>
-      {% endif %}
-    {% endif %}
-  {% endif %}
 </div>

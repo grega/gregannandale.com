@@ -1,14 +1,19 @@
-// Variables
+@font-face {
+  font-family: 'Aller';
+  src: url('../assets/fonts/Aller_Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --color-background: #000000;
+  --color-background: #151515;
   --color-text: #ffffff;
   --color-text-muted: #888888;
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  --font-family: 'Aller', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
   --max-width: 1800px;
   --header-height: 80px;
 }
 
-// Reset & Base Styles
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -29,7 +34,6 @@ body {
   overflow-x: hidden;
 }
 
-// Typography
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.2;
@@ -45,16 +49,13 @@ a {
   }
 }
 
-// Layout
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--header-height);
-  background-color: rgba(0, 0, 0, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: var(--color-background);
   z-index: 1000;
 }
 
@@ -69,7 +70,7 @@ a {
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -84,12 +85,12 @@ a {
   }
 }
 
-// Hero
 .hero-container {
   width: 100%;
   height: calc(100vh - var(--header-height));
-  margin-top: var(--header-height);
   overflow: hidden;
+  display: flex;
+  margin-top: var(--header-height);
 
   .hero-image {
     width: 100%;
@@ -98,13 +99,11 @@ a {
   }
 }
 
-// Gallery
 .gallery {
   width: 100%;
   overflow: hidden;
 }
 
-// Featured Image
 .featured-container {
   width: 100%;
   max-width: 1200px;
@@ -128,10 +127,9 @@ a {
 }
 
 .featured-has-margin {
-  margin-top: 80px; // Adjust if your header is a different height
+  margin-top: 80px;
 }
 
-// Thumbnails
 .thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(3, 400px);
@@ -159,7 +157,6 @@ a {
   }
 }
 
-// Footer
 .site-footer {
   padding: 2rem;
   text-align: center;
@@ -167,7 +164,6 @@ a {
   margin-top: 4rem;
 }
 
-// Responsive adjustments
 @media (max-width: 1400px) {
   .thumbnail-grid {
     grid-template-columns: repeat(2, 400px);
