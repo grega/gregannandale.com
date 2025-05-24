@@ -1,0 +1,56 @@
+---
+layout: base.njk
+---
+
+{# Optional hero image - only shown if includeHero is true #}
+{% if includeHero and hero and hero[0] and hero[0].image %}
+{# Hero image #}
+<div class="hero-container">
+  {% if hero[0] %}
+    <img src="{{ hero[0].image }}" alt="{{ hero[0].alt }}" class="hero-image" />
+  {% endif %}
+</div>
+{% endif %}
+
+<div class="gallery">
+  {# Featured image #}
+  <div id="featured-container">
+    {% if featured_image and featured_image.image %}
+      {% set featImage = featured_image %}
+      <img src="{{ featImage.image }}" alt="{{ featImage.alt or 'Featured image' }}" class="featured-image" />
+    {% endif %}
+  </div>
+
+  {# Thumbnail grid - always render #}
+  <div class="thumbnail-grid">
+    {% for image in images %}
+      {% if image and image.image %}
+        {% set thumbImage = image %}
+        {% set pageUrl = "/" + galleryPath %}
+        {% if galleryPath %}{% set pageUrl = pageUrl + "/" %}{% endif %}
+        {% set pageUrl = pageUrl + loop.index0 + "/" %}
+        <a href="{{ pageUrl }}" class="thumbnail-wrapper">
+          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" />
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {# Navigation - only shown if showNavigation is true #}
+  {% if showNavigation %}
+    {% set paginationData = page | getPaginationData %}
+    {% if paginationData and images %}
+      {% set nav = paginationData | getNavigation(images | length) %}
+      {% if nav.previous or nav.next %}
+      <nav class="pagination">
+        {% if nav.previous %}
+          <a href="{{ nav.previous }}" class="prev">Previous</a>
+        {% endif %}
+        {% if nav.next %}
+          <a href="{{ nav.next }}" class="next">Next</a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</div>

@@ -1,0 +1,124 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Portfolio",
+  headerClass: "transparent",
+  eleventyComputed: {
+    hero: data => data.portfolio.hero,
+    images: data => data.portfolio.images,
+    featured_image: data => data.portfolio.images[0],
+    galleryPath: "",
+    includeHero: true
+  }
+}
+---
+
+{# Hero image #}
+<div class="hero-container">
+  {% if portfolio.hero[0] %}
+    <img src="{{ portfolio.hero[0].image }}" alt="{{ portfolio.hero[0].alt }}" class="hero-image" />
+  {% endif %}
+</div>
+
+{# Portfolio content #}
+<div class="gallery">
+  {# Featured image #}
+  <div id="featured-container">
+    {% if portfolio.images[0] %}
+      <img src="{{ portfolio.images[0].image }}" alt="{{ portfolio.images[0].alt or 'Featured image' }}" class="featured-image" />
+    {% endif %}
+  </div>
+
+  {# Thumbnail grid #}
+  <div class="thumbnail-grid">
+    {% for image in portfolio.images %}
+      <a href="/portfolio/{{ loop.index0 }}/" class="thumbnail-wrapper">
+        <img src="{{ image.image }}" alt="{{ image.alt or 'Thumbnail image' }}" class="thumbnail" />
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  // Hide header on scroll down, show on scroll up
+  let lastScroll = 0;
+  const header = document.querySelector('.site-header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      header.classList.remove('hidden');
+      return;
+    }
+    
+    if (currentScroll > lastScroll && !header.classList.contains('hidden')) {
+      header.classList.add('hidden');
+    } else if (currentScroll < lastScroll && header.classList.contains('hidden')) {
+      header.classList.remove('hidden');
+    }
+    
+    lastScroll = currentScroll;
+  });
+
+  // Function to update featured image and URL
+  function updateFeaturedImage(imageData) {
+    const featuredContainer = document.getElementById('featured-container');
+    if (!featuredContainer) return;
+
+    // Remove existing picture element
+    const existingPicture = featuredContainer.querySelector('picture');
+    if (existingPicture) {
+      existingPicture.remove();
+    }
+
+    // Create new picture element with the selected image
+    const newPicture = document.createElement('picture');
+    newPicture.innerHTML = imageData.pictureHTML;
+    featuredContainer.appendChild(newPicture);
+
+    // Update URL without reloading the page
+    const url = new URL(window.location);
+    url.searchParams.set('image', imageData.id);
+    window.history.pushState({}, '', url);
+  }
+
+  // Add click handlers for thumbnails
+  document.querySelectorAll('.thumbnail-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', function() {
+      const imageId = this.dataset.imageId;
+      const pictureElement = this.querySelector('picture');
+      
+      if (pictureElement) {
+        updateFeaturedImage({
+          pictureHTML: pictureElement.outerHTML.replace('thumbnail', 'featured-image'),
+          id: imageId
+        });
+
+        document.getElementById('featured-container').scrollIntoView({behavior: 'smooth'});
+      }
+    });
+  });
+
+  // Handle initial load and browser back/forward
+  function handleUrlImageId() {
+    const url = new URL(window.location);
+    const imageId = url.searchParams.get('image');
+    
+    if (imageId) {
+      const wrapper = document.querySelector(`[data-image-id="${imageId}"]`);
+      if (wrapper) {
+        const pictureElement = wrapper.querySelector('picture');
+        if (pictureElement) {
+          updateFeaturedImage({
+            pictureHTML: pictureElement.outerHTML.replace('thumbnail', 'featured-image'),
+            id: imageId
+          });
+        }
+      }
+    }
+  }
+
+  window.addEventListener('load', handleUrlImageId);
+  window.addEventListener('popstate', handleUrlImageId);
+</script> 

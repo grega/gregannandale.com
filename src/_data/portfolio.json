@@ -1,0 +1,31 @@
+{
+  "hero": [
+    {
+      "title": "Patagonia",
+      "image": "assets/images/patagonia.jpg",
+      "alt": "Patagonia"
+    }
+  ],
+  "images": [
+    {
+      "title": "Siberia",
+      "image": "assets/images/siberia.jpg",
+      "alt": "Siberia"
+    },
+    {
+      "title": "Berg",
+      "image": "assets/images/berg.jpg",
+      "alt": "Berg"
+    },
+    {
+      "title": "Lights",
+      "image": "assets/images/lights.jpg",
+      "alt": "Lights"
+    },
+    {
+      "title": "Patagonia",
+      "image": "assets/images/patagonia.jpg",
+      "alt": "Patagonia"
+    }
+  ]
+} 

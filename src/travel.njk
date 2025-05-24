@@ -1,0 +1,13 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Travel Photography",
+  headerClass: "transparent",
+  eleventyComputed: {
+    images: data => data.travel.images,
+    featured_image: data => data.travel.images[0],
+    galleryPath: "travel",
+    includeHero: true
+  }
+}
+--- 
