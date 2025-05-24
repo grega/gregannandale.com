@@ -15,17 +15,17 @@
 
 {# Hero image #}
 <div class="hero-container">
-  {% if portfolio.hero[0] %}
-    <img src="{{ portfolio.hero[0].image }}" alt="{{ portfolio.hero[0].alt }}" class="hero-image" />
+  {% if hero.images[0] %}
+    <img src="{{ hero.images[0].image }}" alt="{{ hero.images[0].alt }}" class="hero-image" sizes="(min-width: 1200px) 1200px, 100vw" />
   {% endif %}
 </div>
 
 {# Portfolio content #}
 <div class="gallery">
   {# Featured image #}
-  <div id="featured-container">
+  <div class="featured-container {% if not (includeHero and hero and hero[0] and hero[0].image) %}featured-has-margin{% endif %}">
     {% if portfolio.images[0] %}
-      <img src="{{ portfolio.images[0].image }}" alt="{{ portfolio.images[0].alt or 'Featured image' }}" class="featured-image" />
+      <img src="{{ portfolio.images[0].image }}" alt="{{ portfolio.images[0].alt or 'Featured image' }}" class="featured-image" sizes="(min-width: 1200px) 1200px, 100vw" />
     {% endif %}
   </div>
 
@@ -33,7 +33,7 @@
   <div class="thumbnail-grid">
     {% for image in portfolio.images %}
       <a href="/portfolio/{{ loop.index0 }}/" class="thumbnail-wrapper">
-        <img src="{{ image.image }}" alt="{{ image.alt or 'Thumbnail image' }}" class="thumbnail" />
+        <img src="{{ image.image }}" alt="{{ image.alt or 'Thumbnail image' }}" class="thumbnail" sizes="(min-width: 1200px) 1200px, 100vw" />
       </a>
     {% endfor %}
   </div>

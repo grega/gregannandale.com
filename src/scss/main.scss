@@ -105,7 +105,7 @@ a {
 }
 
 // Featured Image
-#featured-container {
+.featured-container {
   width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
@@ -125,6 +125,10 @@ a {
 
 .featured-image {
   display: block;
+}
+
+.featured-has-margin {
+  margin-top: 80px; // Adjust if your header is a different height
 }
 
 // Thumbnails
@@ -188,7 +192,7 @@ a {
     }
   }
   
-  #featured-container {
+  .featured-container {
     padding: 0 1rem;
   }
 }

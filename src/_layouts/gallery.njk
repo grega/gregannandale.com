@@ -4,20 +4,18 @@ layout: base.njk
 
 {# Optional hero image - only shown if includeHero is true #}
 {% if includeHero and hero and hero[0] and hero[0].image %}
-{# Hero image #}
 <div class="hero-container">
-  {% if hero[0] %}
-    <img src="{{ hero[0].image }}" alt="{{ hero[0].alt }}" class="hero-image" />
-  {% endif %}
+  {% set heroImage = hero[0] %}
+  <img src="{{ heroImage.image }}" alt="{{ heroImage.alt or 'Hero image' }}" class="hero-image" sizes="(min-width: 1200px) 1200px, 100vw" />
 </div>
 {% endif %}
 
 <div class="gallery">
   {# Featured image #}
-  <div id="featured-container">
+  <div class="featured-container {% if not (includeHero and hero and hero[0] and hero[0].image) %}featured-has-margin{% endif %}">
     {% if featured_image and featured_image.image %}
       {% set featImage = featured_image %}
-      <img src="{{ featImage.image }}" alt="{{ featImage.alt or 'Featured image' }}" class="featured-image" />
+      <img src="{{ featImage.image }}" alt="{{ featImage.alt or 'Featured image' }}" class="featured-image" sizes="(min-width: 1200px) 1200px, 100vw" />
     {% endif %}
   </div>
 
@@ -30,7 +28,7 @@ layout: base.njk
         {% if galleryPath %}{% set pageUrl = pageUrl + "/" %}{% endif %}
         {% set pageUrl = pageUrl + loop.index0 + "/" %}
         <a href="{{ pageUrl }}" class="thumbnail-wrapper">
-          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" />
+          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" sizes="(min-width: 1200px) 1200px, 100vw" />
         </a>
       {% endif %}
     {% endfor %}

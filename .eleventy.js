@@ -16,9 +16,9 @@ module.exports = function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(directoryOutputPlugin);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // widths: [400, 800, 1200, 1600, 2000],
-    // formats: ["avif", "webp", "jpeg"],
-    // sizes: "100vw"
+    widths: [400, 800, 1200, 1600, 2000],
+    formats: ["avif", "webp", "jpeg"],
+    sizes: "(min-width: 1200px) 1200px, 100vw"
   });
   
   // Add pagination data
