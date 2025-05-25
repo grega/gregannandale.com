@@ -60,30 +60,9 @@ a {
   z-index: 1000;
 }
 
-.main-nav {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .site-title {
   font-size: 1.4rem;
   font-weight: 500;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-
-  a {
-    font-size: 1rem;
-    font-weight: 400;
-  }
 }
 
 .hero-container {
@@ -179,12 +158,6 @@ a {
     gap: 1.5rem;
   }
 }
-
-@media (max-width: 768px) {
-  .nav-links {
-    // display: none;
-  }
-} 
 
 @media (max-width: 500px) {
   .thumbnail-grid {

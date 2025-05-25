@@ -11,8 +11,14 @@
   <header class="site-header">
     <nav class="main-nav" aria-label="Main Navigation">
       <a href="/" class="site-title">Greg Annandale</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="/">Portfolio</a></li>
+        <li class="nav-galleries"><a href="#">Galleries:</a></li>
         <li class="dropdown">
           <button type="button" class="dropdown-title" aria-expanded="false" aria-controls="galleries-dropdown">
             Galleries
@@ -38,5 +44,14 @@
   <footer class="site-footer">
     <p>Copyright &copy; Greg Annandale</p>
   </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      const nav = document.querySelector('.main-nav');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html> 
