@@ -135,6 +135,10 @@ nav {
     &:focus-within {
       .dropdown-title {
         color: var(--color-text-muted);
+
+        &:after { 
+          border-top-color: var(--color-text-muted);
+        }
       }
 
       .dropdown-menu {
