@@ -2,7 +2,6 @@
 layout: base.njk
 ---
 
-{# Optional hero image - only shown if includeHero is true #}
 {% if includeHero and hero and hero[0] and hero[0].image %}
 <div class="hero-container">
   {% set heroImage = hero[0] %}
@@ -11,7 +10,6 @@ layout: base.njk
 {% endif %}
 
 <div class="gallery">
-  {# Featured image #}
   <div class="featured-container {% if not (includeHero and hero and hero[0] and hero[0].image) %}featured-has-margin{% endif %}">
     {% if featured_image and featured_image.image %}
       {% set featImage = featured_image %}
@@ -19,7 +17,10 @@ layout: base.njk
     {% endif %}
   </div>
 
-  {# Thumbnail grid - always render #}
+  {% if featured_image and featured_image.title %}
+    <div class="featured-title">{{ featured_image.title }}</div>
+  {% endif %}
+
   <div class="thumbnail-grid">
     {% for image in images %}
       {% if image and image.image %}

@@ -84,7 +84,7 @@ a:hover {
 .featured-container {
   width: 100%;
   max-width: 1200px;
-  margin: 4rem auto;
+  margin: 4rem auto 0;
   padding: 2rem;
   background-color: #fff;
 }
@@ -96,6 +96,14 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.featured-title {
+  text-align: center;
+  margin: 1.5rem auto 4rem;
+  color: var(--color-text);
+  font-weight: 500;
+  max-width: 1200px;
 }
 
 .featured-image {

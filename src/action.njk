@@ -1,0 +1,12 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Action & Water Photography",
+  eleventyComputed: {
+    images: data => data.action.images,
+    featured_image: data => data.action.images[0],
+    galleryPath: "action",
+    includeHero: true
+  }
+}
+--- 

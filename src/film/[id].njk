@@ -1,0 +1,19 @@
+---js
+{
+  pagination: {
+    data: "film.images",
+    size: 1,
+    alias: "featured_image"
+  },
+  category: "film",
+  permalink: "/{{ category }}/{{ featured_image.title | slug }}/index.html",
+  layout: "gallery.njk",
+  eleventyComputed: {
+    title: data => `${data.featured_image.title || 'Image'} - Film Photography`,
+    description: data => data.featured_image.alt || 'Film photography image',
+    images: "{{ film.images }}",
+    galleryPath: "{{ category }}",
+    includeHero: false
+  }
+}
+--- 

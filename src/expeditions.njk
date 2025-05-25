@@ -1,0 +1,12 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Expedition Photography",
+  eleventyComputed: {
+    images: data => data.expeditions.images,
+    featured_image: data => data.expeditions.images[0],
+    galleryPath: "expeditions",
+    includeHero: true
+  }
+}
+--- 

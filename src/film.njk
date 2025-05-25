@@ -1,0 +1,12 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Film Photography",
+  eleventyComputed: {
+    images: data => data.film.images,
+    featured_image: data => data.film.images[0],
+    galleryPath: "film",
+    includeHero: true
+  }
+}
+--- 

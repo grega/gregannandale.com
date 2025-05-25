@@ -1,0 +1,12 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Landscape Photography",
+  eleventyComputed: {
+    images: data => data.landscapes.images,
+    featured_image: data => data.landscapes.images[0],
+    galleryPath: "landscapes",
+    includeHero: true
+  }
+}
+--- 

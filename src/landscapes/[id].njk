@@ -1,0 +1,19 @@
+---js
+{
+  pagination: {
+    data: "landscapes.images",
+    size: 1,
+    alias: "featured_image"
+  },
+  category: "landscapes",
+  permalink: "/{{ category }}/{{ featured_image.title | slug }}/index.html",
+  layout: "gallery.njk",
+  eleventyComputed: {
+    title: data => `${data.featured_image.title || 'Image'} - Landscape Photography`,
+    description: data => data.featured_image.alt || 'Landscape photography image',
+    images: "{{ landscapes.images }}",
+    galleryPath: "{{ category }}",
+    includeHero: false
+  }
+}
+--- 
