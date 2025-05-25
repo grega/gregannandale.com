@@ -182,7 +182,7 @@ a {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    // display: none;
   }
 } 
 
@@ -201,3 +201,5 @@ a {
     padding: 0;
   }
 }
+
+@import 'nav';

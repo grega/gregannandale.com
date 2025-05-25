@@ -169,11 +169,6 @@ a:hover {
     gap: 1.5rem;
   }
 }
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
 @media (max-width: 500px) {
   .thumbnail-grid {
     grid-template-columns: repeat(1, 300px);
@@ -186,4 +181,95 @@ a:hover {
   .featured-container {
     padding: 0;
   }
+}
+nav {
+  background-color: var(--color-background);
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+nav > ul {
+  grid-auto-flow: column;
+}
+nav > ul > li {
+  margin: 0 0.5rem;
+}
+nav > ul > li .dropdown-title {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  margin: 0 0.75rem 0 0.5rem;
+}
+nav > ul > li a,
+nav > ul > li .dropdown-title {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+nav ul li {
+  padding: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown .dropdown-title {
+  align-items: center;
+}
+.dropdown .dropdown-title:after {
+  content: "";
+  position: absolute;
+  border: 0.35rem solid transparent;
+  border-top-color: var(--color-text);
+  margin: 0.35em 0 0 0.25em;
+  transform: translateY(0.15em);
+}
+.dropdown .dropdown-menu {
+  position: absolute;
+  min-width: 15ch;
+  left: 50%;
+  top: calc(100% - 0rem);
+  transition: 280ms all 120ms ease-out;
+  transform: rotateX(-90deg) translateX(-50%);
+  transform-origin: top center;
+  visibility: hidden;
+  opacity: 0.3;
+  padding: 0.5rem;
+  background-color: var(--color-background);
+}
+.dropdown .dropdown-menu a {
+  color: var(--color-text);
+  display: block;
+  padding: 0.5em;
+  opacity: 0;
+  transition: 280ms all 120ms ease-out;
+}
+.dropdown .dropdown-menu a:hover {
+  color: var(--color-text-muted);
+}
+.dropdown .dropdown-menu a:focus {
+  color: var(--color-text-muted);
+}
+.dropdown:hover .dropdown-title, .dropdown:focus-within .dropdown-title {
+  color: var(--color-text-muted);
+}
+.dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+}
+.dropdown:hover .dropdown-menu a, .dropdown:focus-within .dropdown-menu a {
+  opacity: 1;
+}
+.dropdown:hover:after, .dropdown:focus-within:after {
+  opacity: 1;
 }

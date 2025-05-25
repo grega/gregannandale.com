@@ -9,11 +9,21 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main Navigation">
       <a href="/" class="site-title">Greg Annandale</a>
       <ul class="nav-links">
         <li><a href="/">Portfolio</a></li>
-        <li><a href="/galleries">Galleries</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-title" aria-expanded="false" aria-controls="galleries-dropdown">
+            Galleries
+          </button>
+          <ul class="dropdown-menu" id="galleries-dropdown">
+            <li><a href="#">Expeditions</a></li>
+            <li><a href="#">Film</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
         <li><a href="https://stories.gregannandale.com">Stories</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
