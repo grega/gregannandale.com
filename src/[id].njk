@@ -5,7 +5,7 @@
     size: 1,
     alias: "featured_image"
   },
-  permalink: "/{{ pagination.pageNumber }}/index.html",
+  permalink: "/{{ featured_image.title | slug }}/index.html",
   layout: "gallery.njk",
   eleventyComputed: {
     title: data => `${data.featured_image.title || 'Image'} - Portfolio`,

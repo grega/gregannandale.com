@@ -5,13 +5,13 @@
     size: 1,
     alias: "featured_image"
   },
-  permalink: "/travel/{{ pagination.pageNumber }}/index.html",
-  layout: "gallery.njk",
+  category: "travel",
+  permalink: "/{{ category }}/{{ featured_image.title | slug }}/index.html",  layout: "gallery.njk",
   eleventyComputed: {
     title: data => `${data.featured_image.title || 'Image'} - Travel Photography`,
     description: data => data.featured_image.alt || 'Travel photography image',
     images: "{{ travel.images }}",
-    galleryPath: "travel",
+    galleryPath: "{{ category }}",
     includeHero: false
   }
 }
