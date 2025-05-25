@@ -21,7 +21,6 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -104,7 +103,8 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 2rem;
+  padding: 2rem;
+  background-color: #fff;
 }
 .featured-container picture {
   width: 100%;
@@ -166,6 +166,11 @@ a:hover {
     gap: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
 @media (max-width: 500px) {
   .thumbnail-grid {
     grid-template-columns: repeat(1, 300px);
@@ -176,16 +181,6 @@ a:hover {
     height: 200px;
   }
   .featured-container {
-    padding: 0 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .thumbnail-grid {
-    grid-template-columns: repeat(1, minmax(0, 400px));
-    gap: 1rem;
-    padding: 1rem;
+    padding: 0;
   }
 }

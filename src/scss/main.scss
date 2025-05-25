@@ -22,7 +22,6 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -108,7 +107,8 @@ a {
   width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 2rem;
+  padding: 2rem;
+  background-color: #fff;
   
   picture {
     width: 100%;
@@ -177,6 +177,12 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+} 
+
 @media (max-width: 500px) {
   .thumbnail-grid {
     grid-template-columns: repeat(1, 300px);
@@ -189,18 +195,6 @@ a {
   }
   
   .featured-container {
-    padding: 0 1rem;
+    padding: 0;
   }
 }
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .thumbnail-grid {
-    grid-template-columns: repeat(1, minmax(0, 400px));
-    gap: 1rem;
-    padding: 1rem;
-  }
-} 
