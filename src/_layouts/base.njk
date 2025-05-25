@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}Greg Annandale Photography</title>
-    <meta name="description" content="{% if description %}{{ description }}{% else %}Professional photography portfolio of Greg Annandale featuring landscape, expedition, and travel photography.{% endif %}">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} - {% endif %}Greg Annandale Photography</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Professional photography portfolio of Greg Annandale featuring landscape, expedition, and travel photography.{% endif %}">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header class="site-header">
-        <nav class="main-nav">
-            <a href="/" class="site-title">Greg Annandale</a>
-            <ul class="nav-links">
-                <li><a href="/">Portfolio</a></li>
-                <li><a href="/galleries">Galleries</a></li>
-                <li><a href="https://stories.gregannandale.com">Stories</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="/" class="site-title">Greg Annandale</a>
+      <ul class="nav-links">
+        <li><a href="/">Portfolio</a></li>
+        <li><a href="/galleries">Galleries</a></li>
+        <li><a href="https://stories.gregannandale.com">Stories</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        {{ content | safe }}
-    </main>
+  <main>
+    {{ content | safe }}
+  </main>
 
-    <footer class="site-footer">
-        <p>&copy; {{ page.date.getFullYear() }} Greg Annandale.</p>
-    </footer>
+  <footer class="site-footer">
+    <p>&copy; {{ page.date.getFullYear() }} Greg Annandale.</p>
+  </footer>
 </body>
 </html> 
