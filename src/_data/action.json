@@ -1,22 +1,5 @@
 {
   "images": [
-    {
-      "title": "Northern Lights",
-      "image": "/assets/images/lights.jpg",
-      "alt": "Northern Lights over a mountain landscape",
-      "category": "action"
-    },
-    {
-      "title": "Berg",
-      "image": "/assets/images/berg.jpg",
-      "alt": "Berg",
-      "category": "action"
-    },
-    {
-      "title": "Siberia",
-      "image": "/assets/images/siberia.jpg",
-      "alt": "Siberia",
-      "category": "action"
-    }
+
   ]
 } 

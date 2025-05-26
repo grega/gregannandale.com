@@ -13,7 +13,7 @@ layout: base.njk
   <div class="featured-container {% if not (includeHero and hero and hero[0] and hero[0].image) %}featured-has-margin{% endif %}">
     {% if featured_image and featured_image.image %}
       {% set featImage = featured_image %}
-      <img src="{{ featImage.image }}" alt="{{ featImage.alt or 'Featured image' }}" class="featured-image" sizes="(min-width: 1200px) 1200px, 100vw" />
+      <img src="{{ featImage.image }}" alt="{{ featImage.alt or featImage.title }}" class="featured-image" sizes="(min-width: 1200px) 1200px, 100vw" />
     {% endif %}
   </div>
 
@@ -27,9 +27,9 @@ layout: base.njk
         {% set thumbImage = image %}
         {% set pageUrl = "/" + galleryPath %}
         {% if galleryPath %}{% set pageUrl = pageUrl + "/" %}{% endif %}
-        {% set pageUrl = pageUrl + image.title | slug + "/" %}
+        {% set pageUrl = pageUrl + image.title | slug + "-" + loop.index0 + "/" %}
         <a href="{{ pageUrl }}" class="thumbnail-wrapper">
-          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or 'Thumbnail image' }}" class="thumbnail" sizes="(min-width: 200px) 400px" />
+          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or thumbImage.title }}" class="thumbnail" sizes="(min-width: 200px) 400px" />
         </a>
       {% endif %}
     {% endfor %}
