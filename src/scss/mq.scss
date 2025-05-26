@@ -1,0 +1,28 @@
+@media (max-width: 1400px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media (max-width: 900px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(1, 400px);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(1, 300px);
+    padding: 1rem;
+    
+    .thumbnail-wrapper {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  
+  .featured-container {
+    padding: 0;
+  }
+}
