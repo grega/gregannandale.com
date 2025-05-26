@@ -6,12 +6,12 @@
     alias: "featured_image"
   },
   category: "action",
-  permalink: "/{{ category }}/{{ featured_image.title | slug }}/index.html",
+  permalink: "/{{ category | slug }}/{{ featured_image.title | slug }}-{{ pagination.pageNumber }}/index.html",
   layout: "gallery.njk",
   eleventyComputed: {
-    title: data => `${data.featured_image.title || 'Image'} - Action & Water Photography`,
-    description: data => data.featured_image.alt || 'Action and water photography image',
-    images: "{{ action.images }}",
+    title: data => `${data.featured_image.title || 'Image'}`,
+    description: data => data.featured_image.alt,
+    images: data => data.action.images,
     galleryPath: "{{ category }}",
     includeHero: false
   }

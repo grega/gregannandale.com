@@ -1,8 +1,9 @@
 ---js
 {
   layout: "gallery.njk",
-  title: "Landscape Photography",
+  title: "Landscapes",
   eleventyComputed: {
+    hero: data => data.landscapes.hero,
     images: data => data.landscapes.images,
     featured_image: data => data.landscapes.images[0],
     galleryPath: "landscapes",

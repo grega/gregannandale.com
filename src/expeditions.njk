@@ -1,8 +1,9 @@
 ---js
 {
   layout: "gallery.njk",
-  title: "Expedition Photography",
+  title: "Expeditions",
   eleventyComputed: {
+    hero: data => data.expeditions.hero,
     images: data => data.expeditions.images,
     featured_image: data => data.expeditions.images[0],
     galleryPath: "expeditions",

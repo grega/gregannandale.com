@@ -6,12 +6,12 @@
     alias: "featured_image"
   },
   category: "film",
-  permalink: "/{{ category }}/{{ featured_image.title | slug }}/index.html",
+  permalink: "/{{ category | slug }}/{{ featured_image.title | slug }}-{{ pagination.pageNumber }}/index.html",
   layout: "gallery.njk",
   eleventyComputed: {
-    title: data => `${data.featured_image.title || 'Image'} - Film Photography`,
-    description: data => data.featured_image.alt || 'Film photography image',
-    images: "{{ film.images }}",
+    title: data => `${data.featured_image.title || 'Image'}`,
+    description: data => data.featured_image.alt,
+    images: data => data.film.images,
     galleryPath: "{{ category }}",
     includeHero: false
   }

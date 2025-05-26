@@ -1,1 +1,19 @@
- 
+---js
+{
+  pagination: {
+    data: "expeditions.images",
+    size: 1,
+    alias: "featured_image"
+  },
+  category: "expeditions",
+  permalink: "/{{ category | slug }}/{{ featured_image.title | slug }}-{{ pagination.pageNumber }}/index.html",
+  layout: "gallery.njk",
+  eleventyComputed: {
+    title: data => `${data.featured_image.title || 'Image'}`,
+    description: data => data.featured_image.alt,
+    images: data => data.expeditions.images,
+    galleryPath: "{{ category }}",
+    includeHero: false
+  }
+}
+--- 

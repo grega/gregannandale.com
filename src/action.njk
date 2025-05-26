@@ -1,8 +1,9 @@
 ---js
 {
   layout: "gallery.njk",
-  title: "Action & Water Photography",
+  title: "Action",
   eleventyComputed: {
+    hero: data => data.action.hero,
     images: data => data.action.images,
     featured_image: data => data.action.images[0],
     galleryPath: "action",

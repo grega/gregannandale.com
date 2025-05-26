@@ -2,89 +2,89 @@
   "hero": [
     {
       "title": "Cordillera Darwin, Patagonia",
-      "image": "assets/images/portfolio/patagonia1.jpg"
+      "image": "/assets/images/portfolio/patagonia1.jpg"
     }
   ],
   "images": [
     {
       "title": "Drakensberg, South Africa",
-      "image": "assets/images/portfolio/berg1.jpg"
+      "image": "/assets/images/portfolio/berg1.jpg"
     },
     {
       "title": "Altai Mountains, Siberia",
-      "image": "assets/images/portfolio/altai.jpg"
+      "image": "/assets/images/portfolio/altai.jpg"
     },
     {
       "title": "Snæfellsnes, Iceland",
-      "image": "assets/images/portfolio/aurora.jpg"
+      "image": "/assets/images/portfolio/aurora.jpg"
     },
     {
       "title": "Coral wall, Belize",
-      "image": "assets/images/portfolio/belize.jpg"
+      "image": "/assets/images/portfolio/belize.jpg"
     },
     {
       "title": "Sunset over Cape Horn",
-      "image": "assets/images/portfolio/patagonia3.jpg"
+      "image": "/assets/images/portfolio/patagonia3.jpg"
     },
     {
       "title": "Drakensberg mountains, South Africa",
-      "image": "assets/images/portfolio/berg2.jpg"
+      "image": "/assets/images/portfolio/berg2.jpg"
     },
     {
       "title": "Yosemite Valley, USA",
-      "image": "assets/images/portfolio/yosemite2.jpg"
+      "image": "/assets/images/portfolio/yosemite2.jpg"
     },
     {
       "title": "Lioness, Tanzania",
-      "image": "assets/images/portfolio/lioness.jpg"
+      "image": "/assets/images/portfolio/lioness.jpg"
     },
     {
       "title": "Cordillera Darwin, Patagonia",
-      "image": "assets/images/portfolio/patagonia2.jpg"
+      "image": "/assets/images/portfolio/patagonia2.jpg"
     },
     {
       "title": "Bagan, Myanmar",
-      "image": "assets/images/portfolio/bagan.jpg"
+      "image": "/assets/images/portfolio/bagan.jpg"
     },
     {
       "title": "Airole, Italy",
-      "image": "assets/images/portfolio/cdc.jpg"
+      "image": "/assets/images/portfolio/cdc.jpg"
     },
     {
       "title": "Spitsbergen, Svalbard",
-      "image": "assets/images/portfolio/svalbard1.jpg"
+      "image": "/assets/images/portfolio/svalbard1.jpg"
     },
     {
       "title": "Yucatan Peninsula, Mexico",
-      "image": "assets/images/portfolio/cenote.jpg"
+      "image": "/assets/images/portfolio/cenote.jpg"
     },
     {
       "title": "Westfjords, Iceland",
-      "image": "assets/images/portfolio/iceland.jpg"
+      "image": "/assets/images/portfolio/iceland.jpg"
     },
     {
       "title": "Yosemite Valley, CA",
-      "image": "assets/images/portfolio/yosemite1.jpg"
+      "image": "/assets/images/portfolio/yosemite1.jpg"
     },
     {
       "title": "Port du Rat, Pyrenees",
-      "image": "assets/images/portfolio/further.jpg"
+      "image": "/assets/images/portfolio/further.jpg"
     },
     {
       "title": "Nevis Valley, New Zealand South Island",
-      "image": "assets/images/portfolio/nz.jpg"
+      "image": "/assets/images/portfolio/nz.jpg"
     },
     {
       "title": "Spitsbergen, Svalbard",
-      "image": "assets/images/portfolio/svalbard2.jpg"
+      "image": "/assets/images/portfolio/svalbard2.jpg"
     },
     {
       "title": "The Eiger north face, Switzerland",
-      "image": "assets/images/portfolio/eiger.jpg"
+      "image": "/assets/images/portfolio/eiger.jpg"
     },
     {
       "title": "Cordillera Darwin, Patagonia",
-      "image": "assets/images/portfolio/patagonia1.jpg"
+      "image": "/assets/images/portfolio/patagonia1.jpg"
     }
   ]
 } 

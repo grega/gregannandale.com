@@ -1,8 +1,9 @@
 ---js
 {
   layout: "gallery.njk",
-  title: "Film Photography",
+  title: "Film",
   eleventyComputed: {
+    hero: data => data.film.hero,
     images: data => data.film.images,
     featured_image: data => data.film.images[0],
     galleryPath: "film",
