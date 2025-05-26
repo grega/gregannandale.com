@@ -1,0 +1,13 @@
+---js
+{
+  layout: "gallery.njk",
+  title: "Gigs",
+  eleventyComputed: {
+    hero: data => data.gigs.hero,
+    images: data => data.gigs.images,
+    featured_image: data => data.gigs.images[0],
+    galleryPath: "gigs",
+    includeHero: true
+  }
+}
+--- 

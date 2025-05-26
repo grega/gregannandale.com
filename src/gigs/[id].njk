@@ -1,17 +1,17 @@
 ---js
 {
   pagination: {
-    data: "travel.images",
+    data: "gigs.images",
     size: 1,
     alias: "featured_image"
   },
-  category: "travel",
+  category: "gigs",
   permalink: "/{{ category | slug }}/{{ featured_image.title | slug }}-{{ pagination.pageNumber }}/index.html",
   layout: "gallery.njk",
   eleventyComputed: {
     title: data => `${data.featured_image.title || 'Image'}`,
     description: data => data.featured_image.alt,
-    images: data => data.travel.images,
+    images: data => data.gigs.images,
     galleryPath: "{{ category }}",
     includeHero: false
   }

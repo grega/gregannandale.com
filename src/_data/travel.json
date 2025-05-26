@@ -1,5 +1,150 @@
 {
+  "hero": [
+    {
+      "title": "Bagan, Myanmar",
+      "image": "/assets/images/travel/bagan2.jpg"
+    }
+  ],
   "images": [
-
+    {
+      "title": "Yangshuo, China",
+      "image": "/assets/images/travel/china1.jpg"
+    },
+    {
+      "title": "Yosemite Valley, CA",
+      "image": "/assets/images/travel/yosemite1.jpg"
+    },
+    {
+      "title": "Bagan, Myanmar",
+      "image": "/assets/images/travel/bagan1.jpg"
+    },
+    {
+      "title": "San Francisco, CA",
+      "image": "/assets/images/travel/sf1.jpg"
+    },
+    {
+      "title": "Kallur Lighthouse, Faroe Islands",
+      "image": "/assets/images/travel/faroe1.jpg"
+    },
+    {
+      "title": "Mykines Lighthouse, Faroe Islands",
+      "image": "/assets/images/travel/faroe2.jpg"
+    },
+    {
+      "title": "Chernobyl, Ukraine",
+      "image": "/assets/images/travel/chernobyl1.jpg"
+    },
+    {
+      "title": "McWay Beach, Big Sur, CA",
+      "image": "/assets/images/travel/big-sur1.jpg"
+    },
+    {
+      "title": "Bagan, Myanmar",
+      "image": "/assets/images/travel/bagan2.jpg"
+    },
+    {
+      "title": "Vidanta, Yucatan Peninsula, Mexico",
+      "image": "/assets/images/travel/mexico1.jpg"
+    },
+    {
+      "title": "Patagonia, Argentina",
+      "image": "/assets/images/travel/patagonia1.jpg"
+    },
+    {
+      "title": "Angkor Wat, Cambodia",
+      "image": "/assets/images/travel/cambodia1.jpg"
+    },
+    {
+      "title": "Tanzania",
+      "image": "/assets/images/travel/tanzania1.jpg"
+    },
+    {
+      "title": "Pripyat, Ukraine",
+      "image": "/assets/images/travel/chernobyl2.jpg"
+    },
+    {
+      "title": "Singapore",
+      "image": "/assets/images/travel/singapore1.jpg"
+    },
+    {
+      "title": "Brugairolles, France",
+      "image": "/assets/images/travel/france1.jpg"
+    },
+    {
+      "title": "Duga radar, Chernobyl, Ukraine",
+      "image": "/assets/images/travel/chernobyl3.jpg"
+    },
+    {
+      "title": "Dubai, UAE",
+      "image": "/assets/images/travel/dubai1.jpg"
+    },
+    {
+      "title": "Trøllanes, Faroe Islands",
+      "image": "/assets/images/travel/faroe3.jpg"
+    },
+    {
+      "title": "Whistler, BC, Canada",
+      "image": "/assets/images/travel/bc1.jpg"
+    },
+    {
+      "title": "Yosemite Valley, CA",
+      "image": "/assets/images/travel/yosemite2.jpg"
+    },
+    {
+      "title": "Chernobyl, Ukraine",
+      "image": "/assets/images/travel/chernobyl4.jpg"
+    },
+    {
+      "title": "Domain Gayda, Brugairolles, France",
+      "image": "/assets/images/travel/france2.jpg"
+    },
+    {
+      "title": "Chiang Mai, Thailand",
+      "image": "/assets/images/travel/thailand1.jpg"
+    },
+    {
+      "title": "Vancouver Island BC, Canada",
+      "image": "/assets/images/travel/bc2.jpg"
+    },
+    {
+      "title": "Singapore",
+      "image": "/assets/images/travel/singapore2.jpg"
+    },
+    {
+      "title": "Stanley Park, Vancouver, Canada",
+      "image": "/assets/images/travel/vancouver1.jpg"
+    },
+    {
+      "title": "Half Dome, Yosemite, CA",
+      "image": "/assets/images/travel/yosemite3.jpg"
+    },
+    {
+      "title": "Dixie National Forest, UT",
+      "image": "/assets/images/travel/dixie1.jpg"
+    },
+    {
+      "title": "Yosemite Valley, CA",
+      "image": "/assets/images/travel/yosemite4.jpg"
+    },
+    {
+      "title": "Alcatraz, San Francisco, CA",
+      "image": "/assets/images/travel/sf2.jpg"
+    },
+    {
+      "title": "Vancouver Harbour, Canada",
+      "image": "/assets/images/travel/vancouver2.jpg"
+    },
+    {
+      "title": "Half Dome, Yosemite, CA",
+      "image": "/assets/images/travel/yosemite5.jpg"
+    },
+    {
+      "title": "Petaluma, CA",
+      "image": "/assets/images/travel/petaluma1.jpg"
+    },
+    {
+      "title": "Bagan, Myanmar",
+      "image": "/assets/images/travel/bagan3.jpg"
+    }
   ]
 } 
