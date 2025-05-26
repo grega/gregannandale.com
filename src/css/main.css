@@ -74,6 +74,7 @@ a:hover {
 .hero-container {
   width: 100%;
   height: calc(100vh - var(--header-height));
+  max-height: 750px;
   overflow: hidden;
   display: flex;
   margin-top: var(--header-height);
