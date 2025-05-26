@@ -17,10 +17,7 @@
 
 .featured-container {
   width: 100%;
-  max-width: 1350px;
   margin: 4rem auto 0;
-  padding: 2rem;
-  background-color: #fff;
   
   picture {
     width: 100%;
@@ -28,9 +25,15 @@
   }
 
   img {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: #fff;
+    max-height: 1200px;
+    max-width: 1350px;
+    object-fit: contain;
   }
 }
 
