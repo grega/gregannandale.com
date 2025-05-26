@@ -23,7 +23,6 @@ async function resizeImage(filePath) {
     return;
   }
 
-
   const outputBuffer = await image
     .resize({ width, height, fit: "inside", withoutEnlargement: true })
     .toBuffer();
