@@ -75,11 +75,11 @@ a:hover {
   width: 100%;
   display: flex;
   margin-top: var(--header-height);
-  z-index: -1;
 }
 .hero-container .hero-image {
   width: 100%;
   height: 100%;
+  max-width: 2000px;
   object-fit: cover;
 }
 
@@ -88,23 +88,21 @@ a:hover {
 }
 
 .featured-container {
-  width: 100%;
   margin: 4rem auto 0;
 }
-.featured-container picture {
-  width: 100%;
-  display: block;
-}
 .featured-container img {
-  width: auto;
   height: auto;
+  width: auto;
   display: block;
   padding: 2rem;
   margin: 0 auto;
   background-color: #fff;
   max-height: 1200px;
   max-width: 1350px;
-  object-fit: contain;
+}
+
+.featured-has-margin {
+  margin-top: 80px;
 }
 
 .featured-title {
@@ -113,14 +111,6 @@ a:hover {
   color: var(--color-text);
   font-size: 0.8rem;
   max-width: 1200px;
-}
-
-.featured-image {
-  display: block;
-}
-
-.featured-has-margin {
-  margin-top: 80px;
 }
 
 .thumbnail-grid {
@@ -151,11 +141,20 @@ a:hover {
   .thumbnail-grid {
     grid-template-columns: repeat(2, 400px);
   }
+  .featured-container img {
+    max-width: 900px;
+  }
 }
 @media (max-width: 900px) {
   .thumbnail-grid {
     grid-template-columns: repeat(1, 400px);
     gap: 1.5rem;
+  }
+  .featured-container img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: contain;
   }
 }
 @media (max-width: 500px) {
@@ -164,6 +163,9 @@ a:hover {
   }
   .featured-container {
     margin-top: 5rem;
+  }
+  .featured-container img {
+    width: 100%;
     padding: 1rem;
   }
   .thumbnail-grid {
