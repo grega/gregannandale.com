@@ -1,5 +1,178 @@
 {
+  "hero": [
+    {
+      "title": "Westfjords, Iceland",
+      "image": "/assets/images/landscapes/iceland7.jpg"
+    }
+  ],
   "images": [
-
+    {
+      "title": "Cordillera Darwin, Patagonia",
+      "image": "/assets/images/landscapes/patagonia1.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg1.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg2.jpg"
+    },
+    {
+      "title": "Spitsbergen, Svalbard",
+      "image": "/assets/images/landscapes/svalbard1.jpg"
+    },
+    {
+      "title": "Beagle Channel, Patagonia",
+      "image": "/assets/images/landscapes/patagonia2.jpg"
+    },
+    {
+      "title": "Snæfellsnes, Iceland",
+      "image": "/assets/images/landscapes/iceland1.jpg"
+    },
+    {
+      "title": "Sarek National Park, Sweden",
+      "image": "/assets/images/landscapes/sarek1.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg3.jpg"
+    },
+    {
+      "title": "Lofoten, Norway",
+      "image": "/assets/images/landscapes/norway1.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg4.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg5.jpg"
+    },
+    {
+      "title": "Lyngen Alps, Norway",
+      "image": "/assets/images/landscapes/norway2.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg6.jpg"
+    },
+    {
+      "title": "Lofoten, Norway",
+      "image": "/assets/images/landscapes/norway3.jpg"
+    },
+    {
+      "title": "Spitsbergen, Svalbard",
+      "image": "/assets/images/landscapes/svalbard2.jpg"
+    },
+    {
+      "title": "Bruarfoss, Iceland",
+      "image": "/assets/images/landscapes/iceland2.jpg"
+    },
+    {
+      "title": "Lofoten, Norway",
+      "image": "/assets/images/landscapes/norway4.jpg"
+    },
+    {
+      "title": "Sarek National Park, Sweden",
+      "image": "/assets/images/landscapes/sarek2.jpg"
+    },
+    {
+      "title": "Southern Iceland",
+      "image": "/assets/images/landscapes/iceland3.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg7.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg8.jpg"
+    },
+    {
+      "title": "Lofoten, Norway",
+      "image": "/assets/images/landscapes/norway5.jpg"
+    },
+    {
+      "title": "Sarek National Park, Sweden",
+      "image": "/assets/images/landscapes/sarek3.jpg"
+    },
+    {
+      "title": "Drakensberg Mountains, South Africa",
+      "image": "/assets/images/landscapes/berg9.jpg"
+    },
+    {
+      "title": "Stjernøya, Norway",
+      "image": "/assets/images/landscapes/norway6.jpg"
+    },
+    {
+      "title": "Navarino Island, Patagonia",
+      "image": "/assets/images/landscapes/patagonia3.jpg"
+    },
+    {
+      "title": "Lyngen Alps, Norway",
+      "image": "/assets/images/landscapes/norway7.jpg"
+    },
+    {
+      "title": "Snæfellsnes Peninsula, Iceland",
+      "image": "/assets/images/landscapes/iceland4.jpg"
+    },
+    {
+      "title": "Beagle Channel, Patagonia",
+      "image": "/assets/images/landscapes/patagonia4.jpg"
+    },
+    {
+      "title": "Sarek National Park, Sweden",
+      "image": "/assets/images/landscapes/sarek4.jpg"
+    },
+    {
+      "title": "Stokksness Peninsula, Iceland",
+      "image": "/assets/images/landscapes/iceland5.jpg"
+    },
+    {
+      "title": "Pia Fjord, Patagonia",
+      "image": "/assets/images/landscapes/patagonia5.jpg"
+    },
+    {
+      "title": "Spitsbergen, Svalbard",
+      "image": "/assets/images/landscapes/svalbard3.jpg"
+    },
+    {
+      "title": "Årøya Island, Norway",
+      "image": "/assets/images/landscapes/norway8.jpg"
+    },
+    {
+      "title": "Bagan, Myanmar",
+      "image": "/assets/images/landscapes/bagan1.jpg"
+    },
+    {
+      "title": "Snæfellsnes Peninsula, Iceland",
+      "image": "/assets/images/landscapes/iceland6.jpg"
+    },
+    {
+      "title": "Lyngen Alps and Hamnnes, Norway",
+      "image": "/assets/images/landscapes/norway9.jpg"
+    },
+    {
+      "title": "Westfjords, Iceland",
+      "image": "/assets/images/landscapes/iceland7.jpg"
+    },
+    {
+      "title": "Hasvik, Norway",
+      "image": "/assets/images/landscapes/norway10.jpg"
+    },
+    {
+      "title": "Lyngen Alps, Norway",
+      "image": "/assets/images/landscapes/norway11.jpg"
+    },
+    {
+      "title": "Beagle Channel, Patagonia",
+      "image": "/assets/images/landscapes/patagonia6.jpg"
+    },
+    {
+      "title": "Spitsbergen, Svalbard",
+      "image": "/assets/images/landscapes/svalbard4.jpg"
+    }
   ]
-} 
+}
