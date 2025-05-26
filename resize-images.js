@@ -18,7 +18,7 @@ async function resizeImage(filePath) {
   const height = isLandscape ? null : maxSize;
 
   // skip if already within size limits
-  if ((isLandscape && width <= maxSize) || (!isLandscape && height <= maxSize)) {
+  if ((isLandscape && metadata.width <= maxSize) || (!isLandscape && metadata.height <= maxSize)) {
     console.log(`⏩ Skipping (already resized): ${filePath}`);
     return;
   }
