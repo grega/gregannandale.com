@@ -158,6 +158,13 @@ a:hover {
   }
 }
 @media (max-width: 500px) {
+  .hero-container {
+    display: none;
+  }
+  .featured-container {
+    margin-top: 5rem;
+    padding: 1rem;
+  }
   .thumbnail-grid {
     grid-template-columns: repeat(1, 300px);
     padding: 1rem;
@@ -165,9 +172,6 @@ a:hover {
   .thumbnail-grid .thumbnail-wrapper {
     width: 300px;
     height: 200px;
-  }
-  .featured-container {
-    padding: 0;
   }
 }
 .main-nav {
