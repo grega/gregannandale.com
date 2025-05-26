@@ -17,6 +17,13 @@ async function resizeImage(filePath) {
   const width = isLandscape ? maxSize : null;
   const height = isLandscape ? null : maxSize;
 
+  // skip if already within size limits
+  if ((isLandscape && width <= maxSize) || (!isLandscape && height <= maxSize)) {
+    console.log(`⏩ Skipping (already resized): ${filePath}`);
+    return;
+  }
+
+
   const outputBuffer = await image
     .resize({ width, height, fit: "inside", withoutEnlargement: true })
     .toBuffer();
