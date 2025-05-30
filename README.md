@@ -23,3 +23,9 @@ Auto-resize images in the `assets/images` directory (recursively) to 2000px max 
 ```bash
 npm run resize-images
 ```
+
+Test (the Cloudflare Worker):
+
+```bash
+npm test
+```

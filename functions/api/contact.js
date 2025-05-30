@@ -42,7 +42,6 @@ export async function onRequestPost(context) {
 
     return new Response('Message sent successfully', { status: 200 });
   } catch (error) {
-    console.error('Error processing contact form:', error);
     return new Response('Internal server error', { status: 500 });
   }
 } 
