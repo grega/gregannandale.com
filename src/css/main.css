@@ -479,7 +479,7 @@ nav ul li {
     padding: 0;
   }
   nav .nav-links a {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   nav .hamburger {
     display: block;
@@ -503,7 +503,7 @@ nav ul li {
   }
   nav > ul > li {
     font-size: 2rem;
-    margin: 0.25rem 0;
+    margin: 0;
     text-align: left;
     width: 100%;
   }
@@ -534,10 +534,15 @@ nav ul li {
     display: block;
     opacity: 1;
     padding: 0;
+    margin-left: 2rem;
+    align-items: left;
     position: static;
     transform: none;
     visibility: visible;
     width: 100%;
+  }
+  .dropdown .dropdown-menu:hover, .dropdown .dropdown-menu:focus-within {
+    transform: none;
   }
   .dropdown .dropdown-menu a {
     opacity: 1;
