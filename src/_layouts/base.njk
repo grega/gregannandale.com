@@ -48,12 +48,33 @@
   </footer>
 
   <script>
+    // menu toggle
     document.querySelector('.hamburger').addEventListener('click', function() {
       const nav = document.querySelector('.main-nav');
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !isExpanded);
       nav.classList.toggle('active');
     });
+
+    // hero image fade effect
+    const heroContainer = document.querySelector('.hero-container');
+    if (heroContainer) {
+      const overlay = heroContainer.querySelector('::after');
+      const heroHeight = heroContainer.offsetHeight;
+      
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const fadeStart = heroHeight * 0.1;
+        const fadeEnd = heroHeight;
+        
+        if (scrollPosition >= fadeStart) {
+          const opacity = Math.min((scrollPosition - fadeStart) / (fadeEnd - fadeStart), 1);
+          heroContainer.style.setProperty('--overlay-opacity', opacity);
+        } else {
+          heroContainer.style.setProperty('--overlay-opacity', 0);
+        }
+      });
+    }
   </script>
 </body>
 </html> 
