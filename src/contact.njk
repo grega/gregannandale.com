@@ -7,5 +7,63 @@ title: "Contact"
   <div class="content-body">
     <h1>Contact</h1>
     <p>Email – <a href="mailto:greg@gregannandale.com">greg@gregannandale.com</a></p>
+    
+    <form id="contact-form" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+    <div id="form-status" class="form-status"></div>
   </div>
-</div> 
+</div>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    try {
+      submitButton.disabled = true;
+      status.textContent = 'Sending message...';
+      status.className = 'form-status sending';
+
+      const formData = new FormData(form);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      status.textContent = 'Message sent successfully!';
+      status.className = 'form-status success';
+      form.reset();
+    } catch (error) {
+      status.textContent = 'Failed to send message. Please try again.';
+      status.className = 'form-status error';
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+</script> 
