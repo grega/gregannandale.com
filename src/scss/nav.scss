@@ -1,19 +1,19 @@
 .main-nav {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 100%;
   display: flex;
+  height: 100%;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 0 2rem;
 }
 
 nav {
   background-color: var(--color-background);
+  display: grid;
   padding: 0 1rem;
+  place-items: center;
   position: sticky;
   top: 0;
-  display: grid;
-  place-items: center;
 
   .nav-links {
     display: flex;
@@ -27,8 +27,11 @@ nav {
   }
 
   .hamburger {
-    display: none;
+    background-color: var(--color-background);
+    border: none;
     cursor: pointer;
+    display: none;
+    margin-top: 0.25rem;
     padding: 1rem;
     position: absolute;
     right: 1rem;
@@ -36,12 +39,12 @@ nav {
     z-index: 100;
 
     span {
-      display: block;
-      width: 25px;
-      height: 3px;
       background-color: var(--color-text);
+      display: block;
+      height: 3px;
       margin: 5px 0;
       transition: all 0.3s ease;
+      width: 25px;
     }
   }
 
@@ -60,19 +63,19 @@ nav {
 
       a,
       .dropdown-title {
-        text-decoration: none;
-        text-align: center;
         color: #fff;
         font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
       }
     }
   }
 
   ul {
+    display: grid;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
 
     li {
       padding: 0;
@@ -91,33 +94,33 @@ nav {
     align-items: center;
 
     &:after {
-      content: "";
-      position: absolute;
       border: 0.35rem solid transparent;
       border-top-color: var(--color-text);
+      content: "";
       margin: 0.35em 0 0 0.25em;
+      position: absolute;
       transform: translateY(0.15em);
     }
   }
 
   .dropdown-menu {
-    position: absolute;
-    min-width: 15ch;
+    background-color: var(--color-background);
     left: 50%;
-    top: calc(100% - 0rem);
-    transition: 280ms all 120ms ease-out;
-    transform: rotateX(-90deg) translateX(-50%);
-    transform-origin: top center;
-    visibility: hidden;
+    min-width: 15ch;
     opacity: 0.3;
     padding: 0.5rem;
-    background-color: var(--color-background);
+    position: absolute;
+    top: calc(100% - 0rem);
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top center;
+    transition: 280ms all 120ms ease-out;
+    visibility: hidden;
 
     a {
       color: var(--color-text);
       display: block;
-      padding: 0.5em;
       opacity: 0;
+      padding: 0.5em;
       transition: 280ms all 120ms ease-out;
 
       &:hover {
@@ -169,10 +172,7 @@ nav {
     }
     
     .hamburger {
-      background-color: var(--color-background);
       display: block;
-      border: none;
-      margin-top: 0.25rem;
     }
 
     .nav-galleries {
@@ -181,23 +181,23 @@ nav {
     }
 
     > ul {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      height: 100vh;
       background-color: var(--color-background);
       display: flex;
       flex-direction: column;
+      height: 100vh;
       padding: 4rem 2rem;
+      position: fixed;
+      right: -100%;
+      top: 0;
       transition: right 0.3s ease;
+      width: 100%;
       z-index: 99;
 
       > li {
-        margin: 0.25rem 0;
-        width: 100%;
-        text-align: left;
         font-size: 2rem;
+        margin: 0.25rem 0;
+        text-align: left;
+        width: 100%;
 
         .dropdown-title {
           display: none;
@@ -237,13 +237,13 @@ nav {
     }
 
     .dropdown-menu {
+      background: transparent;
+      display: block;
+      opacity: 1;
+      padding: 0;
       position: static;
       transform: none;
-      opacity: 1;
       visibility: visible;
-      background: transparent;
-      padding: 0;
-      display: block;
       width: 100%;
 
       a {
