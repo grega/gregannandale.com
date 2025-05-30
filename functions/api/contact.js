@@ -27,7 +27,7 @@ export async function onRequestPost(context) {
         'X-Postmark-Server-Token': env.POSTMARK_API_TOKEN
       },
       body: JSON.stringify({
-        From: 'noreply@gregannandale.com',
+        From: 'contact@gregannandale.com',
         To: env.NOTIFICATION_EMAIL,
         ReplyTo: email,
         Subject: `New Contact Form Submission from ${name}`,
