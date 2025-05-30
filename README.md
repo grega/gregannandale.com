@@ -1,4 +1,8 @@
-# Greg Annandale Photography portfolio
+# Photography portfolio
+
+https://gregannandale.com
+
+Deployed via [Cloudflare Pages](https://dash.cloudflare.com/c37b1434e9c3d7c46cf23c17acd54595/pages/view/gregannandale-com).
 
 ## Development
 

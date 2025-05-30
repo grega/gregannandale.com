@@ -6,7 +6,6 @@ describe('Contact Form Worker', () => {
   let request;
 
   beforeEach(() => {
-    // Mock environment variables
     env = {
       CONTACT_MESSAGES: {
         put: vi.fn().mockResolvedValue(undefined)
@@ -15,17 +14,16 @@ describe('Contact Form Worker', () => {
       NOTIFICATION_EMAIL: 'test@example.com'
     };
 
-    // Mock fetch for Postmark API
+    // mock fetch for Postmark API
     global.fetch = vi.fn();
   });
 
   it('should store message in KV and send email for valid submission', async () => {
-    // Mock successful Postmark API response
+    // mock successful Postmark API response
     global.fetch.mockResolvedValueOnce({
       ok: true
     });
 
-    // Create test request
     request = new Request('http://localhost/api/contact', {
       method: 'POST',
       headers: {
@@ -41,11 +39,9 @@ describe('Contact Form Worker', () => {
     const response = await onRequestPost({ request, env });
     const responseText = await response.text();
 
-    // Verify response
     expect(response.status).toBe(200);
     expect(responseText).toBe('Message sent successfully');
 
-    // Verify KV storage
     expect(env.CONTACT_MESSAGES.put).toHaveBeenCalled();
     const storedData = JSON.parse(env.CONTACT_MESSAGES.put.mock.calls[0][1]);
     expect(storedData.name).toBe('Test User');
@@ -53,7 +49,6 @@ describe('Contact Form Worker', () => {
     expect(storedData.message).toBe('Test message');
     expect(storedData.timestamp).toBeDefined();
 
-    // Verify Postmark API call
     expect(global.fetch).toHaveBeenCalledWith(
       'https://api.postmarkapp.com/email',
       expect.objectContaining({
@@ -74,7 +69,7 @@ describe('Contact Form Worker', () => {
       },
       body: JSON.stringify({
         name: 'Test User'
-        // Missing email and message
+        // missing email and message
       })
     });
 
@@ -88,7 +83,6 @@ describe('Contact Form Worker', () => {
   });
 
   it('should return 500 when email sending fails', async () => {
-    // Mock failed Postmark API response
     global.fetch.mockResolvedValueOnce({
       ok: false
     });
