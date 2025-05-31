@@ -1,10 +1,27 @@
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
-    const { name, email, message } = await request.json();
+    const { name, email, message, turnstileToken } = await request.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !turnstileToken) {
       return new Response('Missing required fields', { status: 400 });
+    }
+
+    const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        secret: env.TURNSTILE_SECRET_KEY,
+        response: turnstileToken,
+        remoteip: request.headers.get('CF-Connecting-IP')
+      })
+    });
+
+    const turnstileResult = await turnstileResponse.json();
+    if (!turnstileResult.success) {
+      return new Response('Invalid Turnstile token', { status: 400 });
     }
 
     const messageId = crypto.randomUUID();
@@ -30,7 +47,7 @@ export async function onRequestPost(context) {
         From: 'contact@gregannandale.com',
         To: env.NOTIFICATION_EMAIL,
         ReplyTo: email,
-        Subject: `New Contact Form Submission from ${name}`,
+        Subject: `New contact form submission from ${name}`,
         TextBody: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
         MessageStream: 'outbound'
       })
