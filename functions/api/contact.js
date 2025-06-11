@@ -35,7 +35,6 @@ export async function onRequestPost(context) {
       timestamp
     }));
 
-    // send email using Postmark
     const emailResponse = await fetch('https://api.postmarkapp.com/email', {
       method: 'POST',
       headers: {
