@@ -9,7 +9,7 @@
     "build": "npm run build:sass && npm run build:eleventy",
     "watch:eleventy": "eleventy --serve",
     "start": "npm-run-all --parallel watch:sass watch:eleventy",
-    "resize-images": "node resize-images.js",
+    "resize-images": "node ./scripts/resize-images.js",
     "test": "vitest",
     "test:watch": "vitest watch"
   },

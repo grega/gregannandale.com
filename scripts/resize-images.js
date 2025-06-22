@@ -51,4 +51,4 @@ async function processDirectory(dir) {
 
 processDirectory(inputDir)
   .then(() => console.log("🎉 All images processed"))
-  .catch(err => console.error("Something went wrong:", err));
+  .catch(err => console.error("❌ Something went wrong:", err));
