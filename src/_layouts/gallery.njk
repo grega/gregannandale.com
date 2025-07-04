@@ -29,7 +29,13 @@ layout: base.njk
         {% if galleryPath %}{% set pageUrl = pageUrl + "/" %}{% endif %}
         {% set pageUrl = pageUrl + image.title | slug + "-" + loop.index0 + "/" %}
         <a href="{{ pageUrl }}" class="thumbnail-wrapper">
-          <img src="{{ thumbImage.image }}" alt="{{ thumbImage.alt or thumbImage.title }}" class="thumbnail" sizes="(min-width: 200px) 400px" />
+          <img
+            src="{{ thumbImage.image }}"
+            alt="{{ thumbImage.alt or thumbImage.title }}"
+            class="thumbnail"
+            sizes="(min-width: 200px) 400px"
+            style="object-position: center {{ thumbImage.focusY or '50%' }};"
+          />
         </a>
       {% endif %}
     {% endfor %}

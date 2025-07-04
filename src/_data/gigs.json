@@ -8,7 +8,8 @@
   "images": [
     {
       "title": "Flying Colors, Milan",
-      "image": "/assets/images/gigs/flying-colors1.jpg"
+      "image": "/assets/images/gigs/flying-colors1.jpg",
+      "focusY": "25%"
     },
     {
       "title": "Walk off the Earth, NYC",
@@ -16,7 +17,8 @@
     },
     {
       "title": "Flying Colors, Milan",
-      "image": "/assets/images/gigs/flying-colors2.jpg"
+      "image": "/assets/images/gigs/flying-colors2.jpg",
+      "focusY": "25%"
     },
     {
       "title": "Ad Infinitum, Wolverhampton",
@@ -24,7 +26,8 @@
     },
     {
       "title": "Flying Colors, Milan",
-      "image": "/assets/images/gigs/flying-colors3.jpg"
+      "image": "/assets/images/gigs/flying-colors3.jpg",
+      "focusY": "25%"
     },
     {
       "title": "Walk off the Earth, NYC",
@@ -80,11 +83,13 @@
     },
     {
       "title": "Flying Colors, Milan",
-      "image": "/assets/images/gigs/flying-colors6.jpg"
+      "image": "/assets/images/gigs/flying-colors6.jpg",
+      "focusY": "20%"
     },
     {
       "title": "Walk off the Earth, NYC",
-      "image": "/assets/images/gigs/wote10.jpg"
+      "image": "/assets/images/gigs/wote10.jpg",
+      "focusY": "35%"
     },
     {
       "title": "Walk off the Earth, NYC",
@@ -92,7 +97,8 @@
     },
     {
       "title": "Flying Colors, Milan",
-      "image": "/assets/images/gigs/flying-colors7.jpg"
+      "image": "/assets/images/gigs/flying-colors7.jpg",
+      "focusY": "15%"
     },
     {
       "title": "Walk off the Earth, NYC",
