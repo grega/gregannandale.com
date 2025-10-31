@@ -1,3 +1,8 @@
+@use 'contact';
+@use 'content';
+@use 'gallery';
+@use 'nav';
+
 @font-face {
   font-family: 'Aller';
   font-style: normal;
@@ -70,8 +75,3 @@ a {
   padding: 4rem 0 2rem;
   text-align: center;
 }
-
-@import 'contact';
-@import 'content';
-@import 'gallery';
-@import 'nav';
