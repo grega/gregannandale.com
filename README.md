@@ -33,3 +33,9 @@ Test (the Cloudflare Worker):
 ```bash
 npm test
 ```
+
+## Licence
+
+Code in this repository is licensed under the MIT License.
+
+Portfolio photographs and visual artworks are not included in the open-source license and remain fully copyrighted.
