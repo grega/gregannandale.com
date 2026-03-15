@@ -73,7 +73,7 @@
     height: 267px;
     overflow: hidden;
     width: 400px;
-    
+
     &:hover {
       opacity: 0.8;
     }
@@ -125,7 +125,7 @@
 @media (max-width: 500px) {
   .featured-container {
     margin-top: 2rem;
-  
+
     img {
       padding: 0.5rem;
       width: 100%;
@@ -135,7 +135,7 @@
   .thumbnail-grid {
     grid-template-columns: repeat(1, 300px);
     padding: 1rem;
-    
+
     .thumbnail-wrapper {
       height: 200px;
       width: 300px;
