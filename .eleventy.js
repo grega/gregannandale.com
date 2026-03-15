@@ -1,5 +1,7 @@
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
+const sass = require("sass");
+const fs = require("fs");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(directoryOutputPlugin);
@@ -8,13 +10,19 @@ module.exports = function(eleventyConfig) {
     formats: ["jpeg"],
     sizes: "(min-width: 1200px) 1200px, 100vw"
   });
-  
+
+  eleventyConfig.on("eleventy.before", async () => {
+    const result = sass.compile("src/scss/main.scss", { style: "compressed" });
+    fs.mkdirSync("src/css", { recursive: true });
+    fs.writeFileSync("src/css/main.css", result.css);
+  });
+
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/_headers");
-  
+
   eleventyConfig.addWatchTarget("src/scss/");
-  
+
   return {
     dir: {
       input: "src",
