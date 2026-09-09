@@ -18,6 +18,6 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "sass": "^1.69.5",
     "sharp": "^0.34.2",
-    "vitest": "^4.1.0"
+    "vitest": "^4.1.11"
   }
 }
